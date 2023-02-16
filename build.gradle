@@ -9,6 +9,15 @@ repositories {
     mavenCentral()
 }
 
+compileJava {
+        doFirst {
+            options.compilerArgs += [
+                    '--module-path', classpath.asPath
+            ]
+            classpath = files()
+        }
+    }
+
 group = 'org.java-websocket'
 version = '1.5.4-SNAPSHOT'
 sourceCompatibility = 1.9
