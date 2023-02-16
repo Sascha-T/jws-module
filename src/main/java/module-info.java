@@ -29,4 +29,6 @@ module org.java_websocket {
   opens org.java_websocket.protocols;
   opens org.java_websocket.util;
   opens org.java_websocket.server;
+
+  requires org.slf4j;
 }
